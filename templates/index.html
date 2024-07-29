@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Weight Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fish Weight Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="species">Species:</label>
+        <select id="species" name="species" required>
+            <option value="Bream">Bream</option>
+            <option value="Roach">Roach</option>
+            <option value="Pike">Pike</option>
+            <option value="Perch">Perch</option>
+            <option value="Smelt">Smelt</option>
+            <option value="Parkki">Parkki</option>
+            <option value="Whitefish">Whitefish</option>
+        </select>
+
+        <label for="length1">Length1:</label>
+        <input type="text" id="length1" name="length1" required>
+
+        <label for="length2">Length2:</label>
+        <input type="text" id="length2" name="length2" required>
+
+        <label for="length3">Length3:</label>
+        <input type="text" id="length3" name="length3" required>
+
+        <label for="height">Height:</label>
+        <input type="text" id="height" name="height" required>
+
+        <label for="width">Width:</label>
+        <input type="text" id="width" name="width" required>
+
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
